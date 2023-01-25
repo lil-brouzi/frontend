@@ -1,6 +1,5 @@
 # frontend
 Проект по Python django
 
-Hosting 
-
+# Hosting 
 ## https://aspid28.pythonanywhere.com/ ##
