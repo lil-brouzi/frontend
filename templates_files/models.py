@@ -1,13 +1,13 @@
 from django.db import models
 
 class Navigation(models.Model):
-    logo = models.ImageField(upload_to='media/', blank=False, verbose_name='Логотип')
+    logo = models.ImageField(upload_to='img/', blank=False, verbose_name='Логотип')
     logo_text = models.TextField(blank = False, verbose_name='Название', max_length=100)
-    first_menu = models.TextField(blank=False, verbose_name='Первый пункт меню', max_length=25)
-    second_menu = models.TextField(blank=False, verbose_name='Второй пункт меню', max_length=25)
-    thierd_menu = models.TextField(blank=False, verbose_name='Третий пункт меню', max_length=25)
-    fourth_menu = models.TextField(blank=False, verbose_name='Четвертый пункт меню',max_length=25)
-    fifth_menu = models.TextField(blank=False, verbose_name='Пятый пункт меню', max_length=25)
+    menu_el_1 = models.TextField(blank=False, verbose_name='1 пункт меню', max_length=25)
+    menu_el_2 = models.TextField(blank=False, verbose_name='2 пункт меню', max_length=25)
+    menu_el_3 = models.TextField(blank=False, verbose_name='3 пункт меню', max_length=25)
+    menu_el_4 = models.TextField(blank=False, verbose_name='4 пункт меню',max_length=25)
+    menu_el_5 = models.TextField(blank=False, verbose_name='5 пункт меню', max_length=25)
     author = models.TextField(blank=False, verbose_name='Автор', max_length=50)
     class Meta:
         verbose_name = 'Навигация' 
@@ -16,7 +16,7 @@ class Navigation(models.Model):
 class Main(models.Model):
     title = models.TextField(blank=True, verbose_name='Заголовок')
     text = models.TextField(blank=True, verbose_name='Описание профессии')
-    photo = models.ImageField(upload_to='media/', blank=False, verbose_name='Фото')
+    img = models.ImageField(upload_to='img/', blank=True, verbose_name='картинка')
     class Meta:
         verbose_name = 'Главная' 
         verbose_name_plural = 'Главные'
@@ -29,9 +29,9 @@ class Demand(models.Model):
     table2 = models.TextField(blank=True, verbose_name='Таблица 2')
     title4 = models.TextField(blank=True, verbose_name='Заголовок таблицы 3')
     table3 = models.TextField(blank=True, verbose_name='Таблица 3')
-    photo1 = models.ImageField(upload_to='media/', blank = False, verbose_name='Первый график сравнения')
-    photo2 = models.ImageField(upload_to='media/', blank = False, verbose_name='Второй график сравнения')
-    photo3 = models.ImageField(upload_to='media/', blank = True, verbose_name='Третий график сравнения')
+    img1 = models.ImageField(upload_to='img/', blank = True, verbose_name='1 график сравнения')
+    img2 = models.ImageField(upload_to='img/', blank = True, verbose_name='2 график сравнения')
+    img3 = models.ImageField(upload_to='img/', blank = True, verbose_name='3 график сравнения')
     class Meta:
         verbose_name = 'Востребованность' 
         verbose_name_plural = 'Востребованность'
@@ -39,10 +39,10 @@ class Demand(models.Model):
 class Geography(models.Model):
     title = models.TextField(blank=True, verbose_name='Заголовок')
     content = models.TextField(blank=True, verbose_name='Таблицы')
-    first_title = models.CharField(max_length=50, blank=True, verbose_name='Заголовок для первого фото')
-    photo1 = models.ImageField(upload_to='media/', blank=False, verbose_name='Первое фото')
-    second_title = models.CharField(max_length=50, blank=True, verbose_name='Заголовок для второго фото')
-    photo2 = models.ImageField(upload_to='media/', blank=False, verbose_name='Второй график')
+    first_title = models.CharField(max_length=50, blank=True, verbose_name='Заголовок для 1 фото')
+    img1 = models.ImageField(upload_to='img/', blank=True, verbose_name='график 1')
+    second_title = models.CharField(max_length=50, blank=True, verbose_name='Заголовок для 2 фото')
+    img2 = models.ImageField(upload_to='img/', blank=True, verbose_name='график 2')
     class Meta:
         verbose_name = 'География' 
         verbose_name_plural = 'География'
@@ -50,8 +50,8 @@ class Geography(models.Model):
 class Skills(models.Model):
     first_title = models.CharField(max_length=50, blank=True, verbose_name='Заголовок для таблицы')
     content = models.TextField(blank=True, verbose_name='Таблица')
-    graph = models.ImageField(upload_to='media/', blank=False, verbose_name='График 1')
-    graph2 = models.ImageField(upload_to='media/', blank=False, verbose_name='График 2')
+    img1 = models.ImageField(upload_to='img/', blank=True, verbose_name='График 1')
+    img2 = models.ImageField(upload_to='img/', blank=True, verbose_name='График 2')
     class Meta:
         verbose_name = 'Навык' 
         verbose_name_plural = 'Навыки'

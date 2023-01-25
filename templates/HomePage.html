@@ -7,9 +7,8 @@
         <h1>{{main.title|safe}}</h1>
         {{ main.text|safe }}
         <div class='content-flex__img'>
-            <img class="content__img" src="{{ main.photo.url }}"/>
+            <img class="content__img" src="{{ main.img.url }}"/>
         </div>
     </div>
     {% endfor %}
-
 {%endblock%}

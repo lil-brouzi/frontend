@@ -9,7 +9,7 @@ from .models import Demand
 from .models import Geography
 from .models import Skills
 
-def vacancy(request):
+def VacancyPage(request):
 
     class HHAPI:
 
@@ -53,7 +53,7 @@ def vacancy(request):
     vacancies = lastVacancyModel.objects.all()
     navigation = Navigation.objects.all()
     context = {'vacs': vacs, 'vacancies': vacancies, 'navigation': navigation}
-    return render(request, 'vacancy.html' , context)
+    return render(request, 'VacancyPage.html' , context)
 
 def HomePage(request):
     home_info = Main.objects.all()
@@ -65,16 +65,16 @@ def SkillsPage(request):
     skills_info = Skills.objects.all()
     navigation = Navigation.objects.all()
     context = {'navigation': navigation, 'skills_info': skills_info}
-    return render(request, 'Skills.html', context)
+    return render(request, 'SkillsPage.html', context)
 
 def GeographyPage(request):
     geography_info = Geography.objects.all()
     navigation = Navigation.objects.all()
     context = {'navigation': navigation, 'geography_info': geography_info}
-    return render(request, 'Geography.html', context)
+    return render(request, 'GeographyPage.html', context)
 
 def DemendPage(request):
     demand_info = Demand.objects.all()
     navigation = Navigation.objects.all()
     context = {'navigation': navigation, 'demand_info': demand_info}
-    return render(request, 'Demend.html', context)
+    return render(request, 'DemendPage.html', context)

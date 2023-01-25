@@ -8,9 +8,9 @@
             {{ geography.content|safe }}
         </div>
         <h4 class="graph_title1">{{ geography.first_title }}</h4>
-        <img class="geography_graph" src="{{ geography.photo1.url }}"/>
-        <h4 class="graph_title2">{{ geography.second_title }}</h4>
-        <img class="geography_graph" src="{{ geography.photo2.url }}"/>
+        <img class="geography_img" src="{{ geography.img1.url }}"/>
+        <h4 class="img_title2">{{ geography.second_title }}</h4>
+        <img class="geography_img" src="{{ geography.img2.url }}"/>
     </div>
     {% endfor %}
 {%endblock%}

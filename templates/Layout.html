@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="../media/favi.ico">
+    <link rel="icon" href="../img/logo.png">
     <title>Frontend-разработчик</title>
     <link rel="stylesheet" href="{% static "css/styles.css" %}">
 </head>
@@ -20,11 +20,11 @@
     <nav>
         <div class="nav">
             <ul>
-                <a href="/"><li>{{ nav.first_menu }}</li></a>
-                <a href={% url 'demend' %}><li>{{ nav.second_menu }}</li></a>
-                <a href={% url 'geography' %}><li>{{ nav.thierd_menu }}</li></a>
-                <a href={% url 'skills' %}><li>{{ nav.fourth_menu }}</li></a>
-                <a href={% url 'vacancy' %}><li>{{ nav.fifth_menu }}</li></a>
+                <a href="/"><li>{{ nav.menu_el_1 }}</li></a>
+                <a href={% url 'demend' %}><li>{{ nav.menu_el_2 }}</li></a>
+                <a href={% url 'geography' %}><li>{{ nav.menu_el_3 }}</li></a>
+                <a href={% url 'skills' %}><li>{{ nav.menu_el_4 }}</li></a>
+                <a href={% url 'vacancy' %}><li>{{ nav.menu_el_5 }}</li></a>
             </ul>
         </div>
     </nav>
