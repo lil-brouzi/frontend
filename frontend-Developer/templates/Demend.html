@@ -1,0 +1,23 @@
+{% extends 'Layout.html' %}
+
+{% block content %}
+
+    <div class="content__text">
+    {% for demand in demand_info %}
+        <h1>{{demand.title1|safe}}</h1>
+        <div class="tables">
+        <h2>{{ demand.title2 }}</h2>
+        {{ demand.table1|safe }}
+        <h2>{{ demand.title3 }}</h2>
+        {{ demand.table2|safe }}
+        <h2>{{ demand.title4 }}</h2>
+        {{ demand.table3|safe }}
+        </div>
+        <div class='content__img'>
+            <img class="demand_graph" src="{{ demand.photo1.url }}"/>
+            <img class="demand_graph" src="{{ demand.photo2.url }}"/>
+            <img class="demand_graph" src="{{ demand.photo3.url }}"/>
+        </div>
+    </div>
+    {% endfor %}
+{%endblock%}

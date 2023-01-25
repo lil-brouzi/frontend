@@ -1,0 +1,15 @@
+{% extends 'Layout.html' %}
+
+{% block content %}
+
+    {% for main in home_info %}
+    <div class="content__text">
+        <h1>{{main.title|safe}}</h1>
+        {{ main.text|safe }}
+        <div class='content-flex__img'>
+            <img class="content__img" src="{{ main.photo.url }}"/>
+        </div>
+    </div>
+    {% endfor %}
+
+{%endblock%}

@@ -1,0 +1,271 @@
+@font-face {
+    font-family: 'Font-mon';
+    src: local('Font-mon'), url(../fonts/Montserrat-Medium.ttf);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    font-family: 'Font-mon';
+    margin: 0;
+    background-color:rgb(20, 20, 20);
+    color: #E1E3E6;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    color: #E1E3E6;
+    text-decoration: none;
+    outline:none;
+}
+
+.header {
+    display: flex;
+    z-index: 2;
+
+    position: fixed;
+    justify-content: start;
+    align-items: center;
+    width: 100%;
+    height: 56px;
+    top: 0px;    
+    background-color: rgba(30, 30, 30);
+}
+.header a{
+    display: flex;
+    align-items: center;
+}
+
+.header__logo {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    margin-left: 19px;
+    filter: drop-shadow(2px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.header__title {
+    width: 150px;
+    height: 38px;
+    font-family: 'Font-mon';
+}
+
+.nav {
+    justify-content: center;
+    margin-left: 10px;
+    top: 66px;
+    align-items: center;
+    position: fixed;
+    width: 180px;
+    height: 295px;
+    border-radius: 10px;
+    z-index: 1;
+    background: rgb(30, 30, 30);
+}
+
+.nav ul {
+    text-align: left;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav li {
+    padding: 20px 10px;
+    display: block;
+    width: 100%;
+    font-size: 16px;
+    text-shadow: 2px 2px 3px rgba(0,0,0,0.3);
+}
+
+.nav li:hover {
+    background-color:rgba(19, 18, 18, 0.3);
+}
+
+.content {
+    margin-left: 260px;
+    max-width: 966px;
+    margin-top: 76px;
+    margin-right: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content__text {
+    margin: 0;
+    display: flex;
+    max-width: 966px;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content__text p {
+    font-size: 20px;
+}
+
+.content__text h1 {
+    text-align: center;
+    padding-bottom: 15px;
+}
+
+.content__text h2 {
+    margin-top: 20px;
+    padding: 15px;
+    text-align: center;
+}
+
+.content__text h3 {
+    font-size: 22px;
+}
+
+.content__text li {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+.content-flex__img {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+.content__img {
+    width: 600px;
+    border-radius: 10px;
+}
+
+.demand_graph {
+    width: 600px;
+    border-radius: 10px;
+    margin-top: 40px;
+
+}
+
+.geography_graph {
+    width: 800px;
+    border-radius: 10px;
+
+}
+
+.skills_graph {
+    width: 966px;
+    border-radius: 10px;
+    margin-top: 40px;
+
+}
+
+
+.last_text {
+    width: 600px;
+}
+
+.footer {
+    margin-top: 150px;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    bottom: 0;
+    background-color: rgb(30, 30, 30);
+}
+
+.footer__text{
+    font-size: 19px;
+    text-align: center;
+}
+
+.tables-g {
+
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.tables {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.LVtable h2 {
+    margin-bottom: 5px;
+}
+.LVtable ul {
+    border: 2px solid rgb(48, 46, 46);
+    padding-bottom: 20px;
+    border-radius: 10px;
+    background-color:rgb(30, 30, 30);
+}
+
+.LVtable a {
+    color: #cb5443;
+}
+
+.LVtable li {
+    padding-bottom: 10px;
+    margin-right: 40px;
+}
+
+.LVtable .salary {
+    font-size: 20px;
+}
+.LVtable .company {
+    font-size: 17px;
+    padding-bottom: 5px;
+}
+.LVtable .city {
+    font-size: 17px;
+    padding-bottom: 20px;
+}
+
+
+
+
+table {
+    font-size: 14px;
+    border-radius: 10px;
+    border-spacing: 0;
+    text-align: center;
+    margin-bottom: 20px;
+    border: 1px solid;
+    
+}
+
+thead {
+    background-color:rgb(30, 30, 30);
+}
+th {
+    color: white;
+    text-shadow: 0 1px 1px #2D2020;
+    padding: 10px 20px;
+}
+th, td {
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    border-color: white;
+}
+th:first-child, td:first-child {
+    text-align: left;
+}
+th:first-child {
+    border-top-left-radius: 10px;
+}
+th:last-child {
+    border-top-right-radius: 10px;
+    border-right: none;
+}

@@ -1,0 +1,26 @@
+{% extends 'Layout.html' %}
+
+{% block content %}
+
+    <div class="content__text">
+    {% for lv in vacancies %}
+    <h1>{{lv.title}}</h1>
+    </div>
+    <div class="LVtable">
+        {% for i in vacs %}
+        <ul>
+            <a href="{{ i.alternate_url }}"><h2>{{ i.name }}</h2></a>
+            <b></li><li class="salary">{{ i.salary }}</li></b>
+            <li class="company">{{ i.employer }}</li>
+            <li class="city">{{ i.area }}</li>
+            <li>Описание: {{ i.description }}</li>
+            <li>Навыки: {% for skills in i.key_skills %}{{ skills }}{% if not forloop.last %}, {% endif %} {% endfor %} </li>
+            <li>Дата публикации: {{ i.published_at }}</li>
+            <li>Ссылка: <a href="{{ i.alternate_url }}">{{ i.alternate_url }}</a></li>
+        </ul>
+    {% endfor %}
+    {% endfor %}
+    </div>
+
+    
+{%endblock%}

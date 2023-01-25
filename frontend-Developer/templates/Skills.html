@@ -1,0 +1,16 @@
+{% extends 'Layout.html' %}
+
+{% block content %}
+
+    {% for skills in skills_info %}
+    <div class="content__text">
+        <h1>{{ skills.first_title }}</h1>
+        <div class="tables">
+            {{ skills.content|safe }}
+        </div>
+        <img class="skills_graph" src='{{ skills.graph.url }}'/>
+        <img class="skills_graph" src='{{ skills.graph2.url }}'/>
+    </div>
+    {% endfor %}
+
+{%endblock%}

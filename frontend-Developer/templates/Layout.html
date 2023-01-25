@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../media/favi.ico">
+    <title>Frontend-разработчик</title>
+    <link rel="stylesheet" href="{% static "css/styles.css" %}">
+</head>
+<body>
+    {% for nav in navigation %}
+
+    <header class='header'>
+        <a href='/'>
+            <img class="header__logo" src="{{ nav.logo.url }}">
+            <div class="header__title">{{ nav.logo_text }}</div>
+        </a>
+    </header>
+    <nav>
+        <div class="nav">
+            <ul>
+                <a href="/"><li>{{ nav.first_menu }}</li></a>
+                <a href={% url 'demend' %}><li>{{ nav.second_menu }}</li></a>
+                <a href={% url 'geography' %}><li>{{ nav.thierd_menu }}</li></a>
+                <a href={% url 'skills' %}><li>{{ nav.fourth_menu }}</li></a>
+                <a href={% url 'vacancy' %}><li>{{ nav.fifth_menu }}</li></a>
+            </ul>
+        </div>
+    </nav>
+    {% endfor %}
+    <main class='content'>
+        <div class="content__wrapper">
+            {% block content %}
+            {%endblock%}
+        </div>
+    </main>
+    {% for navigator in navigation %}
+    <footer class='footer'>
+        <div class='footer__text'>{{ navigator.author }}</div>
+    </footer>
+    {% endfor %}
+</body>
+</html>

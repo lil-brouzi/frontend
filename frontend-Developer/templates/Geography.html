@@ -1,0 +1,16 @@
+{% extends 'Layout.html' %}
+
+{% block content %}
+    {% for geography in geography_info %}
+    <div class="content__text">
+        <h1>{{geography.title|safe}}</h1>
+        <div class="tables-g">
+            {{ geography.content|safe }}
+        </div>
+        <h4 class="graph_title1">{{ geography.first_title }}</h4>
+        <img class="geography_graph" src="{{ geography.photo1.url }}"/>
+        <h4 class="graph_title2">{{ geography.second_title }}</h4>
+        <img class="geography_graph" src="{{ geography.photo2.url }}"/>
+    </div>
+    {% endfor %}
+{%endblock%}
